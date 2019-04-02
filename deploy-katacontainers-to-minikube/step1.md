@@ -1,4 +1,4 @@
-`add-apt-repository ppa:projectatomic/ppa`{{execute}}
+`add-apt-repository -y ppa:projectatomic/ppa`{{execute}}
 
 ```
 apt-get update
