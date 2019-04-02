@@ -1,10 +1,10 @@
-` curl https://raw.githubusercontent.com/kubernetes/node-api/master/manifests/runtimeclass_crd.yaml > runtimeclass_crd.yaml`{{execute}}
+```
+git clone https://github.com/kata-containers/packaging.git
+cd packaging/kata-deploy
+kubectl apply -f kata-rbac.yaml
+kubectl apply -f kata-deploy.yaml
+```{{execute}}
 
-`kubectl apply -f runtimeclass_crd.yaml`{{execute}}
+`kubectl get ds -n kube-system`{{execute}}
 
-
-`git clone https://github.com/clearlinux/cloud-native-setup.git`{{execute}}
-
-`cd cloud-native-setup/clr-k8s-examples`{{execute}}
-
-`kubectl apply -f 8-kata/kata-qemu-runtimeClass.yaml`{{execute}}
+`kubectl get pods -n kube-system -l name=kata-deploy`{{execute}}
